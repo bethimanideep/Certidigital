@@ -18,7 +18,7 @@ const ForgotPassword = () => {
   function handleEmailSentForm(values) {
     setForgotPasswordLoading(true);
     axios
-      .post("http://localhost:8080/auth/forgetpassword", values)
+      .post("https://certidigital-258m.onrender.com/auth/forgetpassword", values)
       .then((response) => {
         console.log("Data", response.data);
         if (response.data.message === "Password reset email sent") {

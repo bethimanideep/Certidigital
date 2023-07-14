@@ -22,7 +22,7 @@ const ChangePassword = () => {
     // console.log(values, "BODY");
 
     axios
-      .post(`http://localhost:8080/auth/changepassword`, values)
+      .post(`https://certidigital-258m.onrender.com/auth/changepassword`, values)
       .then((response) => {
         if (response.data.msg === "password changed") {
           message.success(

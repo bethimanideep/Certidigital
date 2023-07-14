@@ -32,7 +32,7 @@ const BatchDetailTable = () => {
 
   function fetchBatchDetails() {
     axios
-      .post(`http://localhost:8080/batchcertificate/batch/${params.id}`)
+      .post(`https://certidigital-258m.onrender.com/batchcertificate/batch/${params.id}`)
       .then((res) => {
         // console.log(res.data, "BEFORE");
         setFailed(res.data.failedemails.length);
@@ -105,12 +105,12 @@ const BatchDetailTable = () => {
       dataIndex: "Email_subject",
       key: "image",
       render: (value, index) => {
-        // axios.get(`http://localhost:8080/batchcertificate/image?path=${value}`);
+        // axios.get(`https://certidigital-258m.onrender.com/batchcertificate/image?path=${value}`);
         return (
           <Image
             key={`${value + index}`}
             className="batchDetailTable__certificate"
-            src={`http://localhost:8080/batchcertificate/image?path=${value}`}
+            src={`https://certidigital-258m.onrender.com/batchcertificate/image?path=${value}`}
             width={100}
             preview={{
               mask: <div style={{ background: "rgba(0, 0, 0, 0.5)" }} />,
@@ -172,13 +172,13 @@ const BatchDetailTable = () => {
           <div className="BatchDetailTable__csvBtnMainCont">
             <div className="BatchDetailTable__csvBtnCont">
               <a
-                href={`http://localhost:8080/batchcertificate/allemails/${batchId}`}
+                href={`https://certidigital-258m.onrender.com/batchcertificate/allemails/${batchId}`}
               >
                 <Button type="primary">Download all CSV</Button>
               </a>
 
               <a
-                href={`http://localhost:8080/batchcertificate/successemails/${batchId}`}
+                href={`https://certidigital-258m.onrender.com/batchcertificate/successemails/${batchId}`}
               >
                 <Button style={{ background: "#1F2937" }} type="primary">
                   Download success CSV
@@ -199,7 +199,7 @@ const BatchDetailTable = () => {
                   style={{
                     display: "none",
                   }}
-                  href={`http://localhost:8080/batchcertificate/failedemails/${batchId}`}
+                  href={`https://certidigital-258m.onrender.com/batchcertificate/failedemails/${batchId}`}
                 ></a>
                 Download failed CSV
               </Button>

@@ -26,7 +26,7 @@ const TemplateDetail = () => {
   const [certificateStatus, setCertificateStatus] = useState(false);
   const [showCsvButton, setshowCsvButton] = useState(true);
   const [certificateImageSrc, setCertificateImageSrc] = useState(
-    `http://localhost:8080/template/singletemplate/${id}`
+    `https://certidigital-258m.onrender.com/template/singletemplate/${id}`
   );
   const record = JSON.parse(localStorage.getItem("record"));
   const authDetails = JSON.parse(localStorage.getItem("authDetails"));
@@ -56,7 +56,7 @@ const TemplateDetail = () => {
   }, [certificateImageSrc]);
 
   let checkCertificateAvailableFn = () => {
-    fetch(`http://localhost:8080/certificate/certificateimage/${id}`, {
+    fetch(`https://certidigital-258m.onrender.com/certificate/certificateimage/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -78,7 +78,7 @@ const TemplateDetail = () => {
       });
     if (certificateStatus) {
       setCertificateImageSrc(
-        `http://localhost:8080/certificate/certificateimage/${id}`
+        `https://certidigital-258m.onrender.com/certificate/certificateimage/${id}`
       );
     }
   };
@@ -113,7 +113,7 @@ const TemplateDetail = () => {
   ];
 
   const getAllBatches = () => {
-    fetch(`http://localhost:8080/certificate/certificatedetails/${id}`, {
+    fetch(`https://certidigital-258m.onrender.com/certificate/certificatedetails/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -139,7 +139,7 @@ const TemplateDetail = () => {
   };
 
   const handleDownloadCSV = () => {
-    fetch(`http://localhost:8080/certificate/samplecsv/${id}`, {
+    fetch(`https://certidigital-258m.onrender.com/certificate/samplecsv/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -206,7 +206,7 @@ const TemplateDetail = () => {
               width={"100%"}
               src={
                 certificateStatus
-                  ? `http://localhost:8080/certificate/certificateimage/${id}`
+                  ? `https://certidigital-258m.onrender.com/certificate/certificateimage/${id}`
                   : certificateImageSrc
               }
               alt="CourseComplitionBlankTemplate"

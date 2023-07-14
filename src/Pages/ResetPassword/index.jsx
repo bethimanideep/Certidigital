@@ -16,7 +16,7 @@ const ResetPassword = () => {
     console.log("values", values);
     setResetPasswordFormLoading(true);
     axios
-      .patch(`http://localhost:8080/auth/resetPassword/${id}`, values)
+      .patch(`https://certidigital-258m.onrender.com/auth/resetPassword/${id}`, values)
       .then((response) => {
         console.log("Data", response.data);
         if (response.data.message === "Password updated successfully") {

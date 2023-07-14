@@ -119,7 +119,7 @@ const SampleCertificate = () => {
     };
     console.log("payload: ", payload);
 
-    fetch("http://localhost:8080/certificate/generate-image", {
+    fetch("https://certidigital-258m.onrender.com/certificate/generate-image", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const SampleCertificate = () => {
     // canvas.style.border = "5px solid black";
     const aspectRatio = templateWidth / templateHeight;
     canvas.height = Math.floor(canvas.width / aspectRatio);
-    canvas.style.background = `url(http://localhost:8080/template/singletemplate/${id})`;
+    canvas.style.background = `url(https://certidigital-258m.onrender.com/template/singletemplate/${id})`;
     canvas.style.backgroundSize = "cover";
     let canvas_width = canvas.width;
     setCanvasWidth(canvas_width);

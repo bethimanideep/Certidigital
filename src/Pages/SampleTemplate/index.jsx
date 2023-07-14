@@ -170,7 +170,7 @@ const SampleTemplate = () => {
     formData.append("image", file);
     formData.append("name", name);
 
-    fetch("http://localhost:8080/template/uploadtemplate", {
+    fetch("https://certidigital-258m.onrender.com/template/uploadtemplate", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -205,7 +205,7 @@ const SampleTemplate = () => {
 
   const fetchTemplates = () => {
     axios
-      .get("http://localhost:8080/template/alltemplates", {
+      .get("https://certidigital-258m.onrender.com/template/alltemplates", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -240,7 +240,7 @@ const SampleTemplate = () => {
       onOk() {
         axios
           .delete(
-            `http://localhost:8080/template/deletetemplate/${record.id}`,
+            `https://certidigital-258m.onrender.com/template/deletetemplate/${record.id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -306,7 +306,7 @@ const SampleTemplate = () => {
       width: "30%",
       render: (text, record) => (
         <Image
-          src={`http://localhost:8080/template/singletemplate/${record.id}`}
+          src={`https://certidigital-258m.onrender.com/template/singletemplate/${record.id}`}
           width={80}
           preview={{
             mask: <div style={{ background: "rgba(0, 0, 0, 0.5)" }} />,
@@ -354,7 +354,7 @@ const SampleTemplate = () => {
 
   // const handleDelete = (record) => {
   //   axios
-  //     .delete(`http://localhost:8080/template/deletetemplate/${record.id}`)
+  //     .delete(`https://certidigital-258m.onrender.com/template/deletetemplate/${record.id}`)
   //     .then((res) => {
   //       console.log("res: ", res);
   //       if (res.data.message === "Error deleting image from disk") {
@@ -381,7 +381,7 @@ const SampleTemplate = () => {
     try {
       const values = await form.validateFields();
       await axios.patch(
-        `http://localhost:8080/template/updatetemplate/${selectedProduct.id}`,
+        `https://certidigital-258m.onrender.com/template/updatetemplate/${selectedProduct.id}`,
         values,
         {
           headers: {

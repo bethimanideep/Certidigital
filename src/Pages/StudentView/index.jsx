@@ -36,7 +36,7 @@ function Studentview() {
   }, []);
 
   const handleStudentCertificate = () => {
-    fetch("http://localhost:8080/student/certificate", {
+    fetch("https://certidigital-258m.onrender.com/student/certificate", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -90,7 +90,7 @@ function Studentview() {
                   <div style={{ width: "350px" }} ref={imageRef}>
                     <Image
                       id="image"
-                      src={`http://localhost:8080/student/certificateimages/${item.id}`}
+                      src={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
                       alt={`${item.batch}`}
                       style={{ width: "100%" }}
                       preview={{
@@ -146,25 +146,25 @@ function Studentview() {
                     }}
                   >
                     <FacebookShareButton
-                      url={`http://localhost:8080/student/certificateimages/${item.id}`}
+                      url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
                       quote={item.name}
                     >
                       <FacebookIcon round={true} size={40}></FacebookIcon>
                     </FacebookShareButton>
                     <WhatsappShareButton
-                      url={`http://localhost:8080/student/certificateimages/${item.id}`}
+                      url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
                       title={item.name}
                     >
                       <WhatsappIcon round={true} size={40} />
                     </WhatsappShareButton>
                     <TwitterShareButton
-                      url={`http://localhost:8080/student/certificateimages/${item.id}`}
+                      url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
                       title={item.name}
                     >
                       <TwitterIcon round={true} size={40} />
                     </TwitterShareButton>
                     <LinkedinShareButton
-                      url={`http://localhost:8080/student/certificateimages/${item.id}`}
+                      url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
                       title={item.name}
                     >
                       <LinkedinIcon round={true} size={40} />
@@ -193,7 +193,7 @@ export default Studentview;
   <Row gutter={[16, 16]}>
     <Col span={8}>
       <FacebookShareButton
-        url={`http://localhost:8080/student/certificateimages/${item.id}`}
+        url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
         quote={item.name}
       >
         Facebook
@@ -201,7 +201,7 @@ export default Studentview;
     </Col>
     <Col span={8}>
       <TwitterShareButton
-        url={`http://localhost:8080/student/certificateimages/${item.id}`}
+        url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
         title={item.name}
       >
         Twitter
@@ -209,7 +209,7 @@ export default Studentview;
     </Col>
     <Col span={8}>
       <LinkedinShareButton
-        url={`http://localhost:8080/student/certificateimages/${item.id}`}
+        url={`https://certidigital-258m.onrender.com/student/certificateimages/${item.id}`}
         title={item.name}
       >
         LinkedIn

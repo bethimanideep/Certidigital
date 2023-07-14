@@ -45,7 +45,7 @@ const BulkCertificates = () => {
 
     axios
       .post(
-        `http://localhost:8080/batchcertificate/certificate/batch/${id}`,
+        `https://certidigital-258m.onrender.com/batchcertificate/certificate/batch/${id}`,
         formData,
         {
           headers: {
@@ -58,7 +58,7 @@ const BulkCertificates = () => {
           function recursion() {
             setTimeout(() => {
               axios
-                .get(`http://localhost:8080/batchcertificate/batchdetails`)
+                .get(`https://certidigital-258m.onrender.com/batchcertificate/batchdetails`)
                 .then((res) => {
                   console.log(res, "NREW RESS");
                   let success = res.data.successemails;
@@ -122,7 +122,7 @@ const BulkCertificates = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/batchcertificate/certificate/batch/${id}`,
+        `https://certidigital-258m.onrender.com/batchcertificate/certificate/batch/${id}`,
         {
           method: "POST",
           headers: {
@@ -201,7 +201,7 @@ const BulkCertificates = () => {
   const getMailStatus = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/batchcertificate/email-status",
+        "https://certidigital-258m.onrender.com/batchcertificate/email-status",
         {
           headers: {
             Authorization: `Bearer ${token}`,

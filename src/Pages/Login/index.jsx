@@ -14,7 +14,7 @@ const Login = () => {
     console.log("values", values);
     setLoginFormLoading(true);
     axios
-      .post("http://localhost:8080/auth/login", values)
+      .post("https://certidigital-258m.onrender.com/auth/login", values)
       .then((response) => {
         console.log("Data", response.data);
         if (response.data.message === "Login successful") {

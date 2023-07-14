@@ -14,7 +14,7 @@ const ConfirmSuccess = () => {
   const handleConfirmSuccess = () => {
     setConfirmSuccessLoading(true);
     axios
-      .patch(`http://localhost:8080/auth/emailConfirm/${id}`)
+      .patch(`https://certidigital-258m.onrender.com/auth/emailConfirm/${id}`)
       .then((res) => {
         console.log(res.data);
         if (res.data.message === "Email verification successs") {

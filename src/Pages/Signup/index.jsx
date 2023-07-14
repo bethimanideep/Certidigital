@@ -43,7 +43,7 @@ const Signup = () => {
   function handleSignupForm(values) {
     console.log("values", values);
     setSignupFormLoading(true);
-    fetch("http://localhost:8080/auth/signup", {
+    fetch("https://certidigital-258m.onrender.com/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
